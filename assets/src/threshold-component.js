@@ -59,7 +59,7 @@ const THRESHOLD_COMPONENT = (() => {
           if(data == undefined) 
             data = `${object_keys_encode[j][`rate_${i + 1}`]}%`;
           else 
-            data = `$${data}`  
+            data = `$${formatNumbers(data)}`  
           td.innerHTML += `${data}`
           tr.append(td);
         }
@@ -67,6 +67,12 @@ const THRESHOLD_COMPONENT = (() => {
       }
 
       thresh_table_container.append(tbody);
+    }
+
+    const formatNumbers = (x) => {
+      x = parseFloat(x);
+     let newNum = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     return newNum;
     }
 
     const get_key_map = (thresholds, thresholds_length) => {

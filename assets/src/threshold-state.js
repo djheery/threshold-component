@@ -36,7 +36,7 @@ const TAX_THRESHOLD_STATE = (() => {
             'Married Filing Separately',
             'Head of Household',
             'Trusts and Estates',
-            'Long Term Capital Gain Tax Rate'
+            'Capital Gains Tax Rate (LT)'
           ],
           "2023": {
             single: {
